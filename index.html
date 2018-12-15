@@ -5,6 +5,13 @@
   </head>
   <body>
     <main>
+      <form id="post-form" onsubmit="createPost(); return false">
+        Title: <input type="text" id="postTitle"><br>
+        Author: <input type="text" id="postAuthor"><br>
+        Post: <br>
+        <textarea rows="4" cols="50" id="postBody"></textarea><br>
+        <input type="submit">
+      </form>
     </main>
     <script id="comment-template" type="text/x-lodash-template">
     <div class="comment">
