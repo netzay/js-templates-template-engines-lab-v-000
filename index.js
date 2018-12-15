@@ -17,3 +17,15 @@ function createPost() {
   postElement.innerHTML = blogSection;
   postElement.getElementsByTagName("footer")[0].innerHTML += commentsSection;
 }
+function postComment() {
+  const commentAuthor = document.getElementById('commentAuthor').value;
+  const commentText = document.getElementById('commentText').value;
+  console.log(commentAuthor)
+  console.log(commentText)
+
+  const commentTemplate = _.template(document.getElementById('comment-template').innerHTML);
+  const commentsSection = document.getElementById('comments');
+  console.log(commentsSection);
+  commentsSection.innerHTML += commentTemplate({ 'commentAuthor': commentAuthor, 'commentText': commentText });
+
+}
